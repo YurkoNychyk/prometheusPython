@@ -8,6 +8,7 @@ def text_prompt(msg):
 	try:
 		return raw_input(msg)
 	except NameError:
+		msg = msg +"3.0"
 		return input(msg)
 
 n=int(text_prompt('Input N:'))
