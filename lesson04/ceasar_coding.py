@@ -37,8 +37,8 @@ while encode_decode_answer != 'e' and encode_decode_answer != 'd' and encode_dec
                         output_message = output_message + alphabet[current_letter_index + encoding_shift - len(alphabet)]
 
 
-                elif encode_decode_answer == 'd':
                     print 'Decoding...'
+                elif encode_decode_answer == 'd':
                     output_message = output_message + alphabet[current_letter_index - encoding_shift]
      
             else:
