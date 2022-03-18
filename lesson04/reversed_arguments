@@ -1,0 +1,4 @@
+#Lesson04 Reversed arguments
+import sys
+reversed_arguments = sys.argv.reverse()
+print reversed_arguments
