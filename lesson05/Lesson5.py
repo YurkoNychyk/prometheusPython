@@ -1,10 +1,11 @@
 #Lesson5.py
 from cleaning_lists import clean_list 
 from counter_a_b import counter
+from super_fibonacci import super_fibonacci
+from file_search import file_search
 
-print counter(12345, 567)
-print ""
-print counter(1233211, 12128)
-print ""
-print counter(123, 45)
-print ""
+print file_search(['C:', 'backup.log', 'ideas.txt'], 'ideas.txt')
+print file_search([ 'D:', ['recycle bin'], ['tmp', ['old'], ['new folder1', 'asd.txt', 'asd.bak', 'find.me.bak' ] ], 'hey.py'], 'find.me')
+print file_search([ '/home', ['user1'], ['user2', ['my pictures'], ['desktop', 'not this', 'and not this', ['new folder', 'hereiam.py' ] ] ], 'work.ovpn', 'prometheus.7z', ['user3', ['temp'], ], 'hey.py'], 'hereiam.py')
+print file_search(['C:'], 'ideas.txt')
+print file_search(['C:', ['eee', 'rrr', 'ttt'], ['yyy', 'ideas.txt']], 'ideas.txt') 
