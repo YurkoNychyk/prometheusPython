@@ -2,6 +2,7 @@ from holes_counter import count_holes
 from morze_coding import encode_morze
 from saddle_point import saddle_point
 from most_frequent_words import find_most_frequent
+from base_conversion import convert_n_to_m
 print count_holes('123')
 print
 print count_holes(906)
@@ -41,3 +42,16 @@ print find_most_frequent('Hello,Hello, my dear!')
 print find_most_frequent('to understand recursion you need first to understand recursion...')
 print find_most_frequent('Mom! Mom! Are you sleeping?!!!')
 print find_most_frequent('')
+
+print "Conversion"
+
+print convert_n_to_m([123], 4, 3) == False
+print convert_n_to_m("0123", 5, 6) == '102'
+print convert_n_to_m("123", 3, 5) == False
+print convert_n_to_m(123, 4, 1) == '000000000000000000000000000'
+print convert_n_to_m(-123.0, 11, 16) == False
+print convert_n_to_m("A1Z", 36, 16) == '32E7'
+print "test"
+print convert_n_to_m("A", 16, 10)
+print convert_n_to_m(100, 2, 1)
+print convert_n_to_m('qweasd', 33, 36)
