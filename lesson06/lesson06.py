@@ -55,3 +55,5 @@ print "test"
 print convert_n_to_m("A", 16, 10)
 print convert_n_to_m(100, 2, 1)
 print convert_n_to_m('qweasd', 33, 36)
+print convert_n_to_m('123123123123123123123', 11, 16)
+
