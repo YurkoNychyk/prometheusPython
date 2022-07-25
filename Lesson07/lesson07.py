@@ -1,19 +1,7 @@
-from lecture7_example import *
 from sphere import *
+from Student import *
 
-
-yurko = Human('Yurko Mykolayovych', 1986)
-# yurko.name = 'Yurko Mykolayovych'
-# yurko.birth_year = 1986
-
-print (yurko.name)
-print (yurko.get_age())
-
-student001 = Student('Yurko', 1986, [5, 4, 3, 5, 5])
-print (student001.get_average_mark())
-
-
-
+print "\nTest 7.1\n "
 
 s0 = Sphere(1) # test sphere creation with radius and default center
 print (s0.get_center()) # (0.0, 0.0, 0.0)
@@ -57,3 +45,35 @@ print (s3.get_radius()) # '== 1.99'
 print (s3.is_point_inside(0, 0.99, 0)) # '== True'
 print (s3.is_point_inside(0.99, 0, 0)) # '== False'
 print (s3.is_point_inside(0, 0, 0.99)) # '== False'
+
+print "\nTest 7.2\n"
+
+conf = {
+'exam_max': 30,
+'lab_max': 7,
+'lab_num': 10,
+'k': 0.61,
+}
+oleg = Student('Oleg', conf)
+
+
+oleg.make_lab(1)  # labs: 1 0 0 0 0 0 0 0 0 0, exam: 0
+#print oleg.labs
+oleg.make_lab(8,0)  # labs: 7 0 0 0 0 0 0 0 0 0, exam: 0
+#print oleg.labs
+oleg.make_lab(1)  # labs: 7 1 0 0 0 0 0 0 0 0, exam: 0
+#print oleg.labs
+oleg.make_lab(10,7)  # labs: 7 1 0 0 0 0 0 7 0 0, exam: 0
+#print oleg.labs
+oleg.make_lab(4,1)  # labs: 7 4 0 0 0 0 0 7 0 0, exam: 0
+#print oleg.labs
+oleg.make_lab(5)  # labs: 7 4 5 0 0 0 0 7 0 0, exam: 0
+#print oleg.labs
+oleg.make_lab(6.5)  # labs: 7 4 5 6.5 0 0 0 7 0 0, exam: 0
+#print oleg.labs
+oleg.make_exam(32) # labs: 7 4 5 6.5 0 0 0 7 0 0, exam: 30
+#print ('labs:' + str(oleg.labs) + " exam:" +  str(oleg.exam))
+print oleg.is_certified() # (59.5, False)
+oleg.make_lab(7,1) # labs: 7 7 5 6.5 0 0 0 7 0 0, exam: 30
+#print ('labs:' + str(oleg.labs) + " exam:" +  str(oleg.exam))
+print oleg.is_certified() # (62.5, True)
