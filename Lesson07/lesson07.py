@@ -1,5 +1,6 @@
 from sphere import *
 from Student import *
+from SuperStr import *
 
 print "\nTest 7.1\n "
 
@@ -77,3 +78,26 @@ print oleg.is_certified() # (59.5, False)
 oleg.make_lab(7,1) # labs: 7 7 5 6.5 0 0 0 7 0 0, exam: 30
 #print ('labs:' + str(oleg.labs) + " exam:" +  str(oleg.exam))
 print oleg.is_certified() # (62.5, True)
+
+s = SuperStr('123123123123')
+print s.is_repeatance('123')
+# True
+print s.is_repeatance('123123')
+# True
+print s.is_repeatance('123123123123')
+# True
+print s.is_repeatance('12312')
+# False
+print type(123)
+print s.is_repeatance(123)
+# False
+print s.is_palindrom()
+# False
+print s
+print int(s)
+print s + 'qwe'
+# 123123123123qwe
+p = SuperStr('mystring1gnirtsym')
+print p.is_palindrom()
+# True
+
