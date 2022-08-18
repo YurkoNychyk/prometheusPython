@@ -1,6 +1,7 @@
 from sphere import *
 from Student import *
 from SuperStr import *
+from CreateCalendar import *
 
 print "\nTest 7.1\n "
 
@@ -100,4 +101,8 @@ print s + 'qwe'
 p = SuperStr('mystring1gnirtsym')
 print p.is_palindrom()
 # True
+print (create_calendar_page(1) + "\n")
+print (create_calendar_page() + "\n")
+print (create_calendar_page(3) + "\n")
+print (create_calendar_page(04, 1992) + "\n")
 
