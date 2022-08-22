@@ -16,6 +16,7 @@ print find_fraction(2) # (1, 2)
 print ("Bouquets")
 print bouquets(1,1,1,5) # 34
 print bouquets(2,3,4,10) # 12
-#print bouquets(2,3,4,100) # 4019
-#print bouquets(200,300,400,10000) # 4019
-#print bouquets(200,300,400,100000) # 3524556
+print bouquets(2,3,4,100) # 4019
+print bouquets(200,300,400,10000) # 4019
+print bouquets(200,300,400,100000) # 3524556
+print bouquets(15.5,4.1,5.99,21.75)
