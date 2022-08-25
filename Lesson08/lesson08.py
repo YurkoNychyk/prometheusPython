@@ -1,3 +1,5 @@
+import datetime
+
 from combStr import *
 from FindFraction import *
 from bouquets import *
@@ -14,7 +16,15 @@ print ("Find Fraction")
 print find_fraction(2) # (1, 2)
 
 print ("Bouquets")
-print bouquets(1,1,1,5) # 34
+print bouquets(21.25,13.6,10.5,100)  # 34
+print "SUDOKU"
+x = datetime.datetime.today().time().minute * 60 +  datetime.datetime.today().time().second
+make_sudoku(42)
+y = datetime.datetime.today().time().minute * 60 +  datetime.datetime.today().time().second
+print y-x
 
-print make_sudoku(3)
+x = datetime.datetime.today().time().minute * 60 +  datetime.datetime.today().time().second
+make_sudoku1(42)
 
+y = datetime.datetime.today().time().minute * 60 +  datetime.datetime.today().time().second
+print y-x
