@@ -45,15 +45,9 @@ print find_most_frequent('')
 
 print "Conversion"
 
-print convert_n_to_m([123], 4, 3) == False
-print convert_n_to_m("0123", 5, 6) == '102'
-print convert_n_to_m("123", 3, 5) == False
-print convert_n_to_m(123, 4, 1) == '000000000000000000000000000'
-print convert_n_to_m(-123.0, 11, 16) == False
-print convert_n_to_m("A1Z", 36, 16) == '32E7'
-print "test"
-print convert_n_to_m("A", 16, 10)
-print convert_n_to_m(100, 2, 1)
-print convert_n_to_m('qweasd', 33, 36)
-print convert_n_to_m('123123123123123123123', 11, 16)
 
+print convert_n_to_m('qweasd', 33, 36)
+print convert_n_to_m('000', 10, 2)
+
+print saddle_point([[13]])
+print saddle_point([[5,5,5], [5,5,6], [5,4,5]])
